@@ -44,3 +44,20 @@ donateNow2.addEventListener('click', function(){
 
     console.log(donates,updateDonate);
 })
+
+// 3rd card 
+const donateNow3 = document.getElementById("donate-btn3")
+donateNow3.addEventListener('click', function(){
+    const donateAmount3 = getValueById("donate-3")
+    const currentDonate3 = getTextById("c-donate-3")
+    const currentBalance = getTextById("c-balance")
+    const donates3 = currentBalance - donateAmount3
+    const updateBalance3 = document.getElementById("c-balance");
+    updateBalance3.innerText = donates3;
+    const updateDonate3 = currentDonate3 + donateAmount3
+
+    const newDonate3 = document.getElementById("c-donate-3");
+    newDonate3.innerText = updateDonate3;
+
+    console.log(donates,updateDonate);
+})
