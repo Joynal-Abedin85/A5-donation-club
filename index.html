@@ -12,7 +12,8 @@
     <!-- this is head section  -->
     <div class="sticky top-0  backdrop-blur-xl  pb-5">
         <nav class="flex justify-around py-6  pb-7 bg-orange-400 bg-opacity-10">
-            <button class="font-bold px-7  bg-lime-300 rounded-md ">Blog</button>
+            <button id="blogs-btn" class="font-bold px-7  bg-lime-300 rounded-md ">Blog</button>
+            <button id="homes-btn" class="hidden font-bold px-7  bg-lime-300 rounded-md ">Home</button>
             <div class="flex items-center gap-3">
                 <img src="./images/logo.png" alt="">
                 <h2 class="min-w-max font-bold">Donate Bangladesh</h2>
@@ -23,12 +24,12 @@
             </div>
         </nav>
         <div class="text-center my-6">
-            <button class="py-3 px-4 hover:bg-gray-300  bg-gray-500 bg-opacity-15   duration-500 rounded-lg font-bold">Donation</button>
-            <button class="py-3 px-4 hover:bg-gray-300  bg-gray-500 bg-opacity-15   duration-500 rounded-lg font-bold ml-2" >History</button>
+            <button id="donation" class="py-3 px-4       duration-500 rounded-lg font-bold bg-lime-400">Donation</button>
+            <button id="history" class="py-3 px-4 hover:bg-gray-300 bg-gray-100      duration-500 rounded-lg font-bold ml-2" >History</button>
         </div>
     </div>
     <!-- this is menu section  -->
-    <div class="w-5/6 mx-auto">
+    <div id="main-sect" class="w-5/6 mx-auto">
 
         <div class="flex gap-5 items-center border border-gray-300 p-5 rounded-xl my-10">
             <div class="w-1/2">
@@ -42,7 +43,7 @@
                 <h1 class="font-bold my-4">Donate for  flood of Noakhali, Bangladesh</h1>
                 <p class="text-sm text-gray-400">The flood situation in Noakhali has worsened due to continuous rain and upstream water, leading many people to seek shelters. However, space is unavailable in remote areas, forcing many to live in waterlogged conditions. so we need donate leading many people to seek shelters. However, space is unavailable in remote areas, forcing many to live in waterlogged conditions. so we need donate</p>
                 <input id="enter-amount" class="w-full border border-gray-200 p-2 rounded-lg my-4" type="number" placeholder="Write Donation Amount">
-                <button id="donate" class="w-full py-2 text-center bg-lime-400 font-bold rounded-lg" onclick="my_modal_1.showModal()">Donate Now</button>
+                <button id="donate" class="w-full py-2 text-center bg-lime-400 font-bold rounded-lg" ">Donate Now</button>
             </div>
         </div>
 
@@ -82,7 +83,7 @@
         
     </div>
     <!-- this is blog section -->
-    <div class="w-5/6 mx-auto">
+    <div id="blog-section" class="w-5/6 mx-auto hidden">
         <div class="collapse collapse-arrow bg-base-200">
             <input type="radio" name="my-accordion-2" checked="checked" />
             <div class="collapse-title text-2xl  bg-gray-300 font-bold ">Click to open this one and close others</div>
@@ -109,7 +110,7 @@
     <!-- this is modal section  -->
      
     
-    <dialog id="my_modal_1" class="modal">
+    <dialog id="my_modal_1" class="modal hidden">
         <div class="modal-box text-center">
             <h3 class="text-4xl font-extrabold ">Congrates!</h3>
         <div class="flex  justify-center py-3">
@@ -122,9 +123,18 @@
         
                 <button class="btn ">Close confirmation</button>
             </form>
+            
         </div>
         </div>
     </dialog>
+
+    <!-- history section  -->
+    <div id="history-details" class="hidden w-5/6 mx-auto ">
+        <h3 class="text-center font-bold text-3xl py-5">history details</h3>
+        <div id="history-list" class="bg-gray-400 rounded-2xl m-5">
+
+        </div>
+    </div>
 
     <script src="./home.js"></script>
 </body>
