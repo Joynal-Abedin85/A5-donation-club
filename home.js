@@ -43,6 +43,17 @@ donateNow.addEventListener('click', function(){
     const newDonate = document.getElementById("c-donate");
     newDonate.innerText = updateDonate;
 
+    // this is history 
+
+    const historyitem = document.createElement("div");
+    historyitem.className = ' rounded-2xl my-3 p-4 border border-gray-300'
+    historyitem.innerHTML= `
+        
+        <p class= "font-bold text-xl ">${donateAmount.toFixed(2)} Taka is Donated for famine-2024 at feni,bangladesh </p>
+        <p class="py-2"> Date : ${new Date()}</p>
+    `
+    const historycontainer = document.getElementById("history-list");
+    historycontainer.insertBefore(historyitem,historycontainer.firstChild)
     
     
 })
@@ -53,11 +64,11 @@ donateNow2.addEventListener('click', function(){
     const donateAmount2 = getValueById("donate-2")
     const currentDonate2 = getTextById("c-donate-2")
     const currentBalance = getTextById("c-balance")
-    if(donateAmount <= 0){
+    if(donateAmount2 <= 0){
         alert("enter positive amount")
         return
     }
-    if(isNaN(donateAmount)){
+    if(isNaN(donateAmount2)){
         alert("enter valid number")
         return
     }
@@ -69,7 +80,17 @@ donateNow2.addEventListener('click', function(){
     const newDonate2 = document.getElementById("c-donate-2");
     newDonate2.innerText = updateDonate2;
 
-    
+    // this is history 
+
+    const historyitem = document.createElement("div");
+    historyitem.className = ' rounded-2xl my-3 p-4 border border-gray-300'
+    historyitem.innerHTML= `
+        
+        <p class= "font-bold text-xl ">${donateAmount2.toFixed(2)} Taka is Donated for Flood Relief in feni,bangladesh </p>
+        <p class="py-2"> Date : ${new Date()}</p>
+    `
+    const historycontainer = document.getElementById("history-list");
+    historycontainer.insertBefore(historyitem,historycontainer.firstChild)
 })
 
 // 3rd card 
@@ -78,11 +99,11 @@ donateNow3.addEventListener('click', function(){
     const donateAmount3 = getValueById("donate-3")
     const currentDonate3 = getTextById("c-donate-3")
     const currentBalance = getTextById("c-balance")
-    if(donateAmount <= 0){
+    if(donateAmount3 <= 0){
         alert("enter positive amount")
         return
     }
-    if(isNaN(donateAmount)){
+    if(isNaN(donateAmount3)){
         alert("enter valid number")
         return
     }
@@ -94,10 +115,22 @@ donateNow3.addEventListener('click', function(){
     const newDonate3 = document.getElementById("c-donate-3");
     newDonate3.innerText = updateDonate3;
 
+     // this is history 
+
+    const historyitem = document.createElement("div");
+    historyitem.className = ' rounded-2xl my-3 p-4 border border-gray-300'
+    historyitem.innerHTML= `
+        
+        <p class= "font-bold text-xl ">${donateAmount3.toFixed(2)} Taka is Donated for Aid for Injured in the Quota Movement,Bangladesh </p>
+         <p class="py-2"> Date : ${new Date()}</p>
+     `
+     const historycontainer = document.getElementById("history-list");
+     historycontainer.insertBefore(historyitem,historycontainer.firstChild)
+
     
 })
 
-// history 
+// history switch
 
 const historybtn = document.getElementById("history");
 const donationbtn = document.getElementById("donation");
