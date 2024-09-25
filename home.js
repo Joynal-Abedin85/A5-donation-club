@@ -1,29 +1,25 @@
 function getValueById(id){
     const getid =document.getElementById(id).value;
     const num = parseFloat(getid)
-
-    return num
+    const num3 = num.toFixed(2)
+    const num4 = parseFloat(num3)
+    
+    return num4
 }
 function getTextById(id){
     const getids =document.getElementById(id).innerText;
     const nums = parseFloat(getids)
-
-    return nums
-}
-
-// this is modal function  
-function modal(id){
+    const num1 = nums.toFixed(2)
+    const num2 = parseFloat(num1)
     
-    const mymodal = document.getElementById("my_modal_1")
-    mymodal.classList.remove("hidden")
-    return id
+    return num2
 }
 
 const donateNow = document.getElementById("donate")
 donateNow.addEventListener('click', function(){
     
     
-    const donateAmount = getValueById("enter-amount")
+    const donateAmount = getValueById("enter-amount");
     const currentDonate = getTextById("c-donate")
     const currentBalance = getTextById("c-balance")
     if(donateAmount <= 0){
@@ -34,7 +30,11 @@ donateNow.addEventListener('click', function(){
         alert("enter valid number")
         return
     }
-    modal("my_modal_1")
+    if(donateAmount > currentBalance){
+        alert("you do not have enough money")
+        return
+    }
+    
     const donates = currentBalance - donateAmount
     const updateBalance = document.getElementById("c-balance");
     updateBalance.innerText = donates;
@@ -43,6 +43,7 @@ donateNow.addEventListener('click', function(){
     const newDonate = document.getElementById("c-donate");
     newDonate.innerText = updateDonate;
 
+    
     // this is history 
 
     const historyitem = document.createElement("div");
@@ -54,6 +55,7 @@ donateNow.addEventListener('click', function(){
     `
     const historycontainer = document.getElementById("history-list");
     historycontainer.insertBefore(historyitem,historycontainer.firstChild)
+    document.getElementById("my_modal_1").showModal()
     
     
 })
@@ -70,6 +72,10 @@ donateNow2.addEventListener('click', function(){
     }
     if(isNaN(donateAmount2)){
         alert("enter valid number")
+        return
+    }
+    if(donateAmount2 > currentBalance){
+        alert("you do not have enough money")
         return
     }
     const donates2 = currentBalance - donateAmount2
@@ -91,6 +97,8 @@ donateNow2.addEventListener('click', function(){
     `
     const historycontainer = document.getElementById("history-list");
     historycontainer.insertBefore(historyitem,historycontainer.firstChild)
+
+    document.getElementById("my_modal_1").showModal()
 })
 
 // 3rd card 
@@ -105,6 +113,10 @@ donateNow3.addEventListener('click', function(){
     }
     if(isNaN(donateAmount3)){
         alert("enter valid number")
+        return
+    }
+    if(donateAmount3 > currentBalance){
+        alert("you do not have enough money")
         return
     }
     const donates3 = currentBalance - donateAmount3
@@ -124,10 +136,10 @@ donateNow3.addEventListener('click', function(){
         <p class= "font-bold text-xl ">${donateAmount3.toFixed(2)} Taka is Donated for Aid for Injured in the Quota Movement,Bangladesh </p>
          <p class="py-2"> Date : ${new Date()}</p>
      `
-     const historycontainer = document.getElementById("history-list");
+    const historycontainer = document.getElementById("history-list");
      historycontainer.insertBefore(historyitem,historycontainer.firstChild)
 
-    
+     document.getElementById("my_modal_1").showModal()
 })
 
 // history switch
@@ -156,26 +168,3 @@ donationbtn.addEventListener('click',function(){
     document.getElementById("history-details").classList.add("hidden");
 })
 
-const blogbtn = document.getElementById("blogs-btn")
-const homebtn = document.getElementById("homes-btn")
-blogbtn.addEventListener('click',function(){
-
-    document.getElementById("main-sect").classList.add("hidden");
-
-    document.getElementById("blog-section").classList.remove("hidden");
-
-    document.getElementById("blogs-btn").classList.add("hidden");
-
-    document.getElementById("homes-btn").classList.remove("hidden");
-})
-
-homebtn.addEventListener('click',function(){
-
-    document.getElementById("main-sect").classList.remove("hidden");
-
-    document.getElementById("blog-section").classList.add("hidden");
-
-    document.getElementById("blogs-btn").classList.remove("hidden");
-
-    document.getElementById("homes-btn").classList.add("hidden");
-})

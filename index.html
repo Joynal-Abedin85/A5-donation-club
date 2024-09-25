@@ -7,14 +7,16 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./blog.html">
 </head>
 <body class="max-w-[1400px]">
     <!-- this is head section  -->
-    <div class="sticky top-0  backdrop-blur-xl  pb-5">
-        <nav class="flex justify-around py-6  pb-7 bg-orange-400 bg-opacity-10">
-            <button id="blogs-btn" class="font-bold px-7  bg-lime-300 rounded-md ">Blog</button>
-            <button id="homes-btn" class="hidden font-bold px-7  bg-lime-300 rounded-md ">Home</button>
-            <div class="flex items-center gap-3">
+    <div class="sticky top-0  backdrop-blur-xl  ">
+        <nav class="flex sm:flex-row flex-col sm:justify-around items-center py-6  pb-7 bg-orange-400 bg-opacity-10">
+            <a href="./blog.html" id="blogs-btn" class="font-bold px-7  py-2 sm:py-2 bg-lime-300 rounded-md ">Blog</a>
+            
+            
+            <div class="flex items-center gap-3 my-3 sm:my-0">
                 <img src="./images/logo.png" alt="">
                 <h2 class="min-w-max font-bold">Donate Bangladesh</h2>
             </div>
@@ -23,96 +25,86 @@
                 <h1 class="min-w-max font-bold"><span id="c-balance" class="mr-2">55000  </span>BDT</h1>
             </div>
         </nav>
-        <div class="text-center my-6">
-            <button id="donation" class="py-3 px-4       duration-500 rounded-lg font-bold bg-lime-400">Donation</button>
-            <button id="history" class="py-3 px-4 hover:bg-gray-300 bg-gray-100      duration-500 rounded-lg font-bold ml-2" >History</button>
-        </div>
-    </div>
-    <!-- this is menu section  -->
-    <div id="main-sect" class="w-5/6 mx-auto">
-
-        <div class="flex gap-5 items-center border border-gray-300 p-5 rounded-xl my-10">
-            <div class="w-1/2">
-                <img class="max-h-[330px] w-full" src="./images/noakhali.png" alt="">
-            </div>
-            <div class="w-1/2">
-                <div class="py-2 px-3 bg-gray-200 rounded-md flex gap-2 items-center w-max">
-                    <img src="./images/coin.png" alt="">
-                    <h1 class="min-w-max"><span id="c-donate" class="mr-2" >5000 </span>BDT</h1>
-                </div>
-                <h1 class="font-bold my-4">Donate for  flood of Noakhali, Bangladesh</h1>
-                <p class="text-sm text-gray-400">The flood situation in Noakhali has worsened due to continuous rain and upstream water, leading many people to seek shelters. However, space is unavailable in remote areas, forcing many to live in waterlogged conditions. so we need donate leading many people to seek shelters. However, space is unavailable in remote areas, forcing many to live in waterlogged conditions. so we need donate</p>
-                <input id="enter-amount" class="w-full border border-gray-200 p-2 rounded-lg my-4" type="number" placeholder="Write Donation Amount">
-                <button id="donate" class="w-full py-2 text-center bg-lime-400 font-bold rounded-lg" ">Donate Now</button>
-            </div>
-        </div>
-
-        <div class="flex gap-5 items-center border border-gray-300 p-5 rounded-xl">
-
-        
-            <div class="w-1/2">
-                <img class="max-h-[330px] w-full" src="./images/feni.png" alt="">
-            </div>
-            <div class="w-1/2">
-                <div class="py-2 px-3 bg-gray-200 rounded-md flex gap-2 items-center w-max">
-                    <img src="./images/coin.png" alt="">
-                    <h1 class="min-w-max"><span class="mr-2" id="c-donate-2">6000 </span>BDT</h1>
-                </div>
-                <h1 class="font-bold my-4">Donate for  flood relief in feni, Bangladesh</h1>
-                <p class="text-sm text-gray-400">The flood situation in feni has worsened due to continuous rain and upstream water, leading many people to seek shelters. However, space is unavailable in remote areas, forcing many to live in waterlogged conditions. so we need donate leading many people to seek shelters. However, space is unavailable in remote areas, forcing many to live in waterlogged conditions. so we need donate</p>
-                <input id="donate-2" class="w-full border border-gray-200 p-2 rounded-lg my-4" type="number" placeholder="Write Donation Amount">
-                <button id="donate-btn2" class="w-full py-2 text-center bg-lime-400 font-bold rounded-lg"
-                
-                >Donate Now</button>
-            </div>
-        </div>
-
-        <div class="flex gap-5 items-center border border-gray-300 p-5 rounded-xl my-10">
-            <div class="w-1/2">
-                <img class="max-h-[330px] w-full" src="./images/quota-protest.png" alt="">
-            </div>
-            <div class="w-1/2">
-                <div class="py-2 px-3 bg-gray-200 rounded-md flex gap-2 items-center w-max">
-                    <img src="./images/coin.png" alt="">
-                    <h1 class="min-w-max"><span class="mr-2" id="c-donate-3" >4000 </span>BDT</h1>
-                </div>
-                <h1 class="font-bold my-4">Aid for injured in the Quota Movement </h1>
-                <p class="text-sm text-gray-400">The recent Quate movement has resulted in numerous injuries and significient hardship for manyindividual. Your support is crucial in providing in madical assitence, rehabiliation and nessary supples to these affexted.by contributed you help ensure that injured .if you support  its help us.  madical assitence, rehabiliation and nessary supples to these affexted.by contributed you help ensure that injured .</p>
-                <input id="donate-3" class="w-full border border-gray-200 p-2 rounded-lg my-4" type="number" placeholder="Write Donation Amount">
-                <button id="donate-btn3" class="w-full py-2 text-center bg-lime-400 font-bold rounded-lg" >Donate Now</button>
-            </div>
-        </div>
         
     </div>
-    <!-- this is blog section -->
-    <div id="blog-section" class="w-5/6 mx-auto hidden">
-        <div class="collapse collapse-arrow bg-base-200">
-            <input type="radio" name="my-accordion-2" checked="checked" />
-            <div class="collapse-title text-2xl  bg-gray-300 font-bold ">Click to open this one and close others</div>
-            <div class="collapse-content">
-              <p>hello</p>
-            </div>
+    <!-- main section  -->
+    <div id="main-section">
+        <div class="text-center py-5 sticky sm:top-[101px] top-[194px] backdrop-blur-xl">
+            <button id="donation" class="sm:py-3 sm:px-4 py-4 px-7    text-2xl sm:text-base  duration-500 rounded-lg font-bold bg-lime-400">Donation</button>
+            <button id="history" class="sm:py-3 sm:px-4 py-4 px-7    text-2xl sm:text-base hover:bg-gray-300 bg-gray-100      duration-500 rounded-lg font-bold ml-2" >History</button>
         </div>
-        <div class="collapse collapse-arrow bg-base-200">
-            <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-2xl  bg-gray-300 font-bold ">Click to open this one and close others</div>
-            <div class="collapse-content">
-              <p>hello</p>
+        <!-- this is menu section  -->
+        <div id="main-sect" class="w-5/6 mx-auto">
+
+            <div class="flex gap-5 items-center flex-col sm:flex-row border border-gray-300 p-5 rounded-xl my-10">
+                <div class="sm:w-1/2 ">
+                    <img class="max-h-[330px] w-full" src="./images/noakhali.png" alt="">
+                </div>
+                <div class="sm:w-1/2">
+                    <div class="py-2 px-3 bg-gray-200 rounded-md flex gap-2 items-center w-max">
+                        <img src="./images/coin.png" alt="">
+                        <h1 class="min-w-max"><span id="c-donate" class="mr-2" >5000 </span>BDT</h1>
+                    </div>
+                    <h1 class="font-bold my-4">Donate for  flood of Noakhali, Bangladesh</h1>
+                    <p class="text-sm text-gray-400">The flood situation in Noakhali has worsened due to continuous rain and upstream water, leading many people to seek shelters. However, space is unavailable in remote areas, forcing many to live in waterlogged conditions. so we need donate leading many people to seek shelters. However, space is unavailable in remote areas, forcing many to live in waterlogged conditions. so we need donate</p>
+                    <input id="enter-amount" class="w-full border border-gray-200 p-2 rounded-lg my-4" type="number" placeholder="Write Donation Amount">
+                    <button id="donate" class="w-full py-2 text-center bg-lime-400 font-bold rounded-lg" ">Donate Now</button>
+                </div>
             </div>
+
+            <div class="flex flex-col sm:flex-row gap-5 items-center border border-gray-300 p-5 rounded-xl">
+
+            
+                <div class="sm:w-1/2">
+                    <img class="max-h-[330px] w-full" src="./images/feni.png" alt="">
+                </div>
+                <div class="sm:w-1/2">
+                    <div class="py-2 px-3 bg-gray-200 rounded-md flex gap-2 items-center w-max">
+                        <img src="./images/coin.png" alt="">
+                        <h1 class="min-w-max"><span class="mr-2" id="c-donate-2">6000 </span>BDT</h1>
+                    </div>
+                    <h1 class="font-bold my-4">Donate for  flood relief in feni, Bangladesh</h1>
+                    <p class="text-sm text-gray-400">The flood situation in feni has worsened due to continuous rain and upstream water, leading many people to seek shelters. However, space is unavailable in remote areas, forcing many to live in waterlogged conditions. so we need donate leading many people to seek shelters. However, space is unavailable in remote areas, forcing many to live in waterlogged conditions. so we need donate</p>
+                    <input id="donate-2" class="w-full border border-gray-200 p-2 rounded-lg my-4" type="number" placeholder="Write Donation Amount">
+                    <button id="donate-btn2" class="w-full py-2 text-center bg-lime-400 font-bold rounded-lg"
+                    
+                    >Donate Now</button>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-5 items-center border border-gray-300 p-5 rounded-xl my-10">
+                <div class="sm:w-1/2">
+                    <img class="max-h-[330px] w-full" src="./images/quota-protest.png" alt="">
+                </div>
+                <div class="sm:w-1/2">
+                    <div class="py-2 px-3 bg-gray-200 rounded-md flex gap-2 items-center w-max">
+                        <img src="./images/coin.png" alt="">
+                        <h1 class="min-w-max"><span class="mr-2" id="c-donate-3" >4000 </span>BDT</h1>
+                    </div>
+                    <h1 class="font-bold my-4">Aid for injured in the Quota Movement </h1>
+                    <p class="text-sm text-gray-400">The recent Quate movement has resulted in numerous injuries and significient hardship for manyindividual. Your support is crucial in providing in madical assitence, rehabiliation and nessary supples to these affexted.by contributed you help ensure that injured .if you support  its help us.  madical assitence, rehabiliation and nessary supples to these affexted.by contributed you help ensure that injured .</p>
+                    <input id="donate-3" class="w-full border border-gray-200 p-2 rounded-lg my-4" type="number" placeholder="Write Donation Amount">
+                    <button id="donate-btn3" class="w-full py-2 text-center bg-lime-400 font-bold rounded-lg" >Donate Now</button>
+                </div>
+            </div>
+            
         </div>
-        <div class="collapse collapse-arrow bg-base-200">
-            <input type="radio" name="my-accordion-2" />
-            <div class="collapse-title text-2xl  bg-gray-300 font-bold ">Click to open this one and close others</div>
-            <div class="collapse-content">
-              <p>hello</p>
+    
+        <!-- history section  -->
+        <div id="history-details" class="hidden w-5/6 mx-auto ">
+            
+            <div id="history-list" class="  m-5">
+
             </div>
         </div>
     </div>
+
+    
 
     <!-- this is modal section  -->
      
     
-    <dialog id="my_modal_1" class="modal hidden">
+    <dialog id="my_modal_1" class="modal ">
         <div class="modal-box text-center">
             <h3 class="text-4xl font-extrabold ">Congrates!</h3>
         <div class="flex  justify-center py-3">
@@ -121,7 +113,7 @@
             <p class="py-4">you have donate for humankind</p>
             <h2 class="font-bold text-xl my-2">Successfully</h2>
         <div class="modal-action ">
-            <form method="dialog " class="text-center w-full">
+            <form method="dialog" class="text-center w-full">
         
                 <button class="btn ">Close confirmation</button>
             </form>
@@ -129,14 +121,6 @@
         </div>
         </div>
     </dialog>
-
-    <!-- history section  -->
-    <div id="history-details" class="hidden w-5/6 mx-auto ">
-        <h3 class="text-center font-bold text-3xl py-5">history details</h3>
-        <div id="history-list" class="  m-5">
-
-        </div>
-    </div>
 
     <script src="./home.js"></script>
 </body>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./blog.html">
+</head>
+<body class="max-w-[1400px]">
+    <div class="   "></div>
+        <nav class="sticky top-0 backdrop-blur-xl  flex sm:flex-row flex-col sm:justify-around items-center  py-6  pb-7 bg-orange-400 bg-opacity-10">
+            
+            
+            <a href="./index.html" id="blogs-btn" class="font-bold px-7  py-2 sm:py-2 bg-lime-300 rounded-md ">Home</a>
+            <div class="flex my-3 sm:my-0 items-center gap-3">
+                <img src="./images/logo.png" alt="">
+                <h2 class="min-w-max font-bold">Donate Bangladesh</h2>
+            </div>
+            <div class="flex items-center gap-2">
+                <img src="./images/coin.png" alt="">
+                <h1 class="min-w-max font-bold"><span id="c-balance" class="mr-2">55000  </span>BDT</h1>
+            </div>
+        </nav>
+        
+    </div>
+    <!-- this is blog section -->
+    <div id="blog-section" class="w-5/6 mx-auto mt-10">
+        <h2 class="font-extrabold text-3xl my-8">Important FAQ ???</h2>
+        <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" checked="checked" />
+            <div class="collapse-title text-2xl  bg-gray-300 font-bold ">what is the (dom) ?</div>
+            <div class="collapse-content">
+              <p class="p-3" >The Document Object Model (DOM) is a programming interface for web documents. It represents the page so that programs can change the document structure, style, and content. The DOM represents the document as nodes and objects; that way, programming languages can interact with the page.</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-2xl  bg-gray-300 font-bold ">How do you select on element from the Dom ?</div>
+            <div class="collapse-content">
+              <p class="p-3" >many way have to select an element , if we need single id we use .getElementById() we select single class and multiple class ,Use a CSS Selector to Select an Element with .querySelector().Use a CSS Selector to Select Multiple Elements with .querySelectorAll()</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-2xl  bg-gray-300 font-bold ">What is event delegation in the context of the DOM, and why it useful?</div>
+            <div class="collapse-content">
+              <p class="p-3" >Event delegation refers to the process of using event propagation (bubbling) to handle events at a higher level in the DOM than the element on which the event originated. It allows us to attach a single event listener for elements that exist now or in the future</p>
+            </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+            <input type="radio" name="my-accordion-2" />
+            <div class="collapse-title text-2xl  bg-gray-300 font-bold ">How do you manipulate an elements attributes and styles using the DOM</div>
+            <div class="collapse-content">
+              <p class="p-3">If you want to change other attributes like id , href , or src , you can use the setAttribute() method. The setAttribute() method accepts two arguments: The name of the attribute to set. The value of the attribute to set</p>
+            </div>
+        </div>
+    </div>
+    <script src="./home.js"></script>
+</body>
+</html>
